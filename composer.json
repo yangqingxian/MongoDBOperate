@@ -9,7 +9,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        'phpoffice/phpexcel':">=1.8.0"
+    },
     "autoload": {
         "psr-4": {
             "yangqingxian\\mongodboperate\\": "src/"
