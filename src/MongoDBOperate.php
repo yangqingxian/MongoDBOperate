@@ -7,7 +7,17 @@
  */
 namespace yangqingxian\mongodboperate;
 
-class MongoDBOperate{
+use MongoDB\Driver\Manager;
 
+class MongoDBOperate{
+    static $manage=null;
+    protected function getInstance(){
+        if(self::$manage==null){
+            $url="";
+            return new Manager($url);
+        }else{
+            return self::$manage;
+        }
+    }
 }
 
